@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#160e20">
+<title>NOVYRA | Small Stories. Big Feelings.</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#160e20;color:#f7f0e8;font-family:Georgia,serif}
+header{padding:24px 22px 18px;border-bottom:1px solid #44334a}
+.top{display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:27px;letter-spacing:5px;color:#e5c58c}
+.logo span{display:block;font:10px Arial;letter-spacing:3px;color:#b8a7b9;margin-top:6px}
+.coins{font:12px Arial;color:#e5c58c;border:1px solid #786044;border-radius:30px;padding:10px 13px}
+main{max-width:650px;margin:auto;padding:24px 21px 110px}
+.eyebrow{font:10px Arial;letter-spacing:3px;color:#c5a46c}
+.hero{padding:45px 25px;background:linear-gradient(145deg,#35203d,#21152c 65%,#171020);border:1px solid #58415c;border-radius:5px;position:relative;overflow:hidden}
+.hero:after{content:"✧";position:absolute;right:15px;top:5px;font-size:110px;color:#a17b4b22}
+.hero h1{font-size:38px;font-weight:normal;line-height:1.15;margin:18px 0}
+.hero p{font:13px Arial;line-height:1.8;color:#c8b8c8;max-width:300px}
+.goldline{width:48px;height:2px;background:#d4b274;margin:20px 0}
+button{cursor:pointer}
+.primary{background:#d8b879;color:#211528;border:0;padding:14px 20px;font:12px Arial;letter-spacing:1px;margin-top:15px}
+.section{margin-top:36px}
+.sectionhead{display:flex;justify-content:space-between;align-items:center}
+h2{font-size:21px;font-weight:normal;margin:0}
+.muted{font:11px Arial;color:#a999aa}
+.categories{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:17px}
+.category{height:100px;border:1px solid #55415c;background:#21172b;color:#eadcc7;text-align:left;padding:16px;font:15px Georgia;position:relative}
+.category span{display:block;font:10px Arial;color:#a99aab;margin-top:9px}
+.category:after{content:"↗";position:absolute;right:13px;bottom:12px;color:#c9a96e}
+.empty{margin-top:17px;padding:28px 17px;text-align:center;border:1px dashed #59465c;background:#1d1426}
+.empty .symbol{font-size:29px;color:#c9a96e}
+.empty p{font:12px Arial;color:#b6a7b7;line-height:1.7}
+nav{position:fixed;bottom:0;left:0;right:0;background:#1d1427;border-top:1px solid #493650;display:flex;justify-content:space-around;padding:13px 3px calc(13px + env(safe-area-inset-bottom));z-index:3}
+nav button{background:none;border:0;color:#aa9bab;font:10px Arial;padding:4px}
+nav button b{display:block;font:19px Arial;margin-bottom:5px}
+nav button.active{color:#e3c184}
+.page{display:none}
+.page.active{display:block}
+.page-title{font-size:32px;font-weight:normal;margin:10px 0}
+.panel{padding:22px;background:#21172b;border:1px solid #55415c;margin-top:18px}
+.panel p{font:13px Arial;color:#b9aabd;line-height:1.8}
+.line{border:0;border-top:1px solid #44334a;margin:22px 0}
+.secondary{background:none;color:#e3c184;border:1px solid #826a4b;padding:12px 18px;font:11px Arial;letter-spacing:1px}
+footer{text-align:center;color:#796b80;font:10px Arial;letter-spacing:2px;padding:25px 0}
+</style>
+</head>
+<body>
+<header>
+<div class="top">
+<div class="logo">NOVYRA
+<span>SMALL STORIES. BIG FEELINGS.</span>
+</div>
+<div class="coins">◇ <span id="credit">0</span> CREDITS</div>
+</div>
+</header>
+
+<main>
+<section class="page active" id="home">
+<div class="hero">
+<div class="eyebrow">WELCOME TO NOVYRA</div>
+<h1>A world of<br>little escapes.</h1>
+<div class="goldline"></div>
+<p>Discover a different kind of reading experience. Your next favourite story begins here.</p>
+<button class="primary" onclick="go('discover')">EXPLORE NOVYRA ↗</button>
+</div>
+
+<div class="section">
+<div class="sectionhead">
+<h2>Explore your mood</h2>
+<span class="muted">YOUR WORLD</span>
+</div>
+<div class="categories">
+<button class="category" onclick="go('discover')">Romance<span>Stories of the heart</span></button>
+<button class="category" onclick="go('discover')">Mystery<span>Uncover the unknown</span></button>
+<button class="category" onclick="go('discover')">Fantasy<span>Beyond imagination</span></button>
+<button class="category" onclick="go('discover')">Drama<span>Feel every moment</span></button>
+</div>
+</div>
+
+<div class="section">
+<div class="sectionhead"><h2>Your reading space</h2><span class="muted">01</span></div>
+<div class="empty">
+<div class="symbol">✧</div>
+<h3 style="font-weight:normal">Something wonderful is coming.</h3>
+<p>Your reading collection will live here. We're preparing the space for your stories.</p>
+</div>
+</div>
+</section>
+
+<section class="page" id="discover">
+<div class="eyebrow">FIND YOUR NEXT ESCAPE</div>
+<h1 class="page-title">Discover</h1>
+<p class="muted">A universe of stories, waiting to be explored.</p>
+<div class="categories">
+<button class="category">Romance<span>Explore collection</span></button>
+<button class="category">Mystery<span>Explore collection</span></button>
+<button class="category">Fantasy<span>Explore collection</span></button>
+<button class="category">Drama<span>Explore collection</span></button>
+</div>
+<div class="empty"><div class="symbol">✧</div><p>Story collections will appear here when they're ready.</p></div>
+</section>
+
+<section class="page" id="library">
+<div class="eyebrow">YOUR PERSONAL COLLECTION</div>
+<h1 class="page-title">My Library</h1>
+<div class="empty"><div class="symbol">◇</div><h3 style="font-weight:normal">Your shelf is waiting.</h3><p>Stories you save and read will be organised here.</p></div>
+</section>
+
+<section class="page" id="wallet">
+<div class="eyebrow">YOUR NOVYRA BALANCE</div>
+<h1 class="page-title">My Wallet</h1>
+<div class="panel">
+<div class="muted">AVAILABLE CREDITS</div>
+<div style="font-size:42px;color:#e4c58b;margin:15px 0" id="walletcredits">0</div>
+<p>Your credits and rewards will be managed here.</p>
+<hr class="line">
+<button class="secondary" onclick="alert('Daily Golden Gift will be available in a future version.')">DAILY GOLDEN GIFT</button>
+</div>
+</section>
+
+<section class="page" id="profile">
+<div class="eyebrow">YOUR NOVYRA ACCOUNT</div>
+<h1 class="page-title">My Profile</h1>
+<div class="panel">
+<div style="font-size:28px;color:#d6b578">✧</div>
+<h2>Welcome, Reader.</h2>
+<p>Your personal reading experience starts here.</p>
+<hr class="line">
+<h3 style="font-weight:normal">NOVYRA Premium</h3>
+<p>Ad-free reading. Monthly bonus credits. Exclusive stories.</p>
+<button class="secondary" onclick="alert('Premium membership will be available after account and payment setup.')">DISCOVER PREMIUM</button>
+</div>
+</section>
+
+<footer>ANOTHER WORLD BETWEEN THE PAGES</footer>
+</main>
+
+<nav>
+<button class="active" onclick="go('home',this)"><b>⌂</b>Home</button>
+<button onclick="go('discover',this)"><b>⌕</b>Discover</button>
+<button onclick="go('library',this)"><b>▤</b>Library</button>
+<button onclick="go('wallet',this)"><b>◇</b>Wallet</button>
+<button onclick="go('profile',this)"><b>○</b>Profile</button>
+</nav>
+
+<script>
+function go(name,btn){
+document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+document.getElementById(name).classList.add('active');
+document.querySelectorAll('nav button').forEach(b=>b.classList.remove('active'));
+if(btn)btn.classList.add('active');
+else document.querySelectorAll('nav button')[['home','discover','library','wallet','profile'].indexOf(name)].classList.add('active');
+window.scrollTo(0,0);
+}
+</script>
+</body>
+</html>
